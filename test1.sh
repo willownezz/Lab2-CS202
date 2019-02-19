@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
-# FILE NAME:         test4.sh
+# FILE NAME:         test1.sh
 # DESCRIPTION:
-# USAGE:             ./test4
+# USAGE:             ./test1
 # COMPILER:          GNU g++ compiler on Linux
 #
 # MODIFICATION HISTORY:
@@ -12,8 +12,6 @@
 
 #!/bin/sh
 
-set -v
+set -v    # This turns on "verbose" mode
 
-./command_line_v4 -fCustDB.txt -aA123B -pA23B42 -i -h
-
-./command_line_v4 Larry, Moe, and Curly
+./command_line_v1 Manny, Moe, and Jack

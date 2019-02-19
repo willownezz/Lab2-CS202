@@ -1,6 +1,19 @@
-// command_line_v4.cpp
+/* -----------------------------------------------------------------------------
+FILE NAME:         command_line_v4.cpp
+DESCRIPTION:       This program stores the address of a variable in a pointer.
+USAGE:             ./command_line_v4
+COMPILER:          GNU g++ compiler on Linux
+
+MODIFICATION HISTORY:
+Author               Date            Version             Description
+---------------      ----------      ------------        ------------
+Luiz Diego Garcia    02/16/19        0.0.1               Created File
+----------------------------------------------------------------------------- */
+
+// Command_line_v4.cpp
 // Test program for parsing a command line
 
+//Libraries
 #include<iostream>
 #include<iomanip>
 #include<cstring>
@@ -14,20 +27,29 @@ void check_arg(char []);
 //      int argc,       // Number of parameters on the command line
 //      char *argv[])   // An array of pointers to C-string
 
+/* -----------------------------------------------------------------------------
+FUNCTION:          main()
+DESCRIPTION:       function that starts the program (main function)
+RETURNS:           0
+----------------------------------------------------------------------------- */
 int main(int argc, char *argv[])
 {
     cout << endl;
     for(int i = 0; i < argc; ++i)
     {
         cout << "Argument " << i << ": " << left << setw(16) << argv[i];
-        if (i)    check_arg(argv[i]);
+        if (i)   check_arg(argv[i]);
         else     cout << endl;
     }
     cout << endl;
 
     return 0;
 }
-
+/* -----------------------------------------------------------------------------
+FUNCTION:          check_arg()
+DESCRIPTION:       Checks arg
+RETURNS:           void
+----------------------------------------------------------------------------- */
 void check_arg(char arg[])
 {
     char buf[100];
@@ -50,7 +72,7 @@ void check_arg(char arg[])
     else
     {
         cout << "Option: " << *p;
-        
+
         if(arg[2] != 0)                     // Look for a string
         {
             strcpy(buf, arg+2);             // Save string to buffer
@@ -59,5 +81,3 @@ void check_arg(char arg[])
         cout << endl;
     }
 }
-
-
