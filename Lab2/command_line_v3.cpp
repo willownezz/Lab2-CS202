@@ -8,6 +8,8 @@ MODIFICATION HISTORY:
 Author               Date            Version             Description
 ---------------      ----------      ------------        ------------
 Luiz Diego Garcia    02/16/19        0.0.1               Created File
+Luiz Diego Garcia    02/19/19        0.0.2               Fixed *p in for loop (line 50)  
+Luiz Diego Garcia    02/20/19        1.0.0               Added function headers / Release 
 ----------------------------------------------------------------------------- */
 
 // Command_line_v3.cpp
@@ -46,10 +48,11 @@ int main(int argc, char *argv[])
     bool first_char = arg[0] == DASH;   // Test 1st arg's 1st char
     bool second_char = false;
 
-    for(; p != 0; ++p)                  // Test 1st arg's 2nd char
+    for(; *p != 0; ++p)                  // Test 1st arg's 2nd char
     {
         second_char = arg[1] == *p;
         if(second_char == true) break;
+    
     }
 
     char buf[100 + 1];

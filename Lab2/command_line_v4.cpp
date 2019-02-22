@@ -8,6 +8,9 @@ MODIFICATION HISTORY:
 Author               Date            Version             Description
 ---------------      ----------      ------------        ------------
 Luiz Diego Garcia    02/16/19        0.0.1               Created File
+Luiz Diego Garcia    02/20/19        0.0.2               Added headers 
+Luiz Diego Garcia    02/20/19        0.0.3               fixed typo in loop 
+Luiz Diego Garcia    02/20/19        1.0.0               release
 ----------------------------------------------------------------------------- */
 
 // Command_line_v4.cpp

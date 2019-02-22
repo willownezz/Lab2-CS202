@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
-# FILE NAME:         test3.sh
+# FILE NAME:         test4.sh
 # DESCRIPTION:
-# USAGE:             ./test3
+# USAGE:             ./test4.sh
 # COMPILER:          GNU g++ compiler on Linux
 #
 # MODIFICATION HISTORY:
@@ -14,6 +14,6 @@
 
 set -v
 
-./command_line_v3 -fCustDB.txt -aA123B -pA23B42 -i -h
+./command_line_v4 -fCustDB.txt -aA123B -pA23B42 -i -h
 
-./command_line_v3 Larry, Moe, and Curly
+./command_line_v4 Larry, Moe, and Curly

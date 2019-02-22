@@ -1,23 +1,27 @@
 /* -----------------------------------------------------------------------------
-FILE NAME:         command_line_v2.cpp
+FILE NAME:         command_line_v1.cpp
 DESCRIPTION:       This program stores the address of a variable in a pointer.
-USAGE:             ./command_line_v2
+USAGE:             ./command_line_v1
 COMPILER:          GNU g++ compiler on Linux
 
 MODIFICATION HISTORY:
 Author               Date            Version             Description
 ---------------      ----------      ------------        ------------
 Luiz Diego Garcia    02/18/19        0.0.1               Created File
+Luiz Diego Garcia    02/19/19        0.0.2               Added headers  
+Luiz Diego Garcia    02/20/19        1.0.0               Release
 ----------------------------------------------------------------------------- */
 
-// Command_line_v2.cpp
-// This program demonstrates how to display command-line arguments
-// Using argc and argv in a while loop
+// Command_line_v1.cpp
+// Test program for reading command-line parameters
 
 //Libraries
 #include <iostream>
 
 using namespace std;
+
+//Function prototypes go here
+void clear_screen();
 
 //    "main() " function --- the program's entry point
 //    int argc        // Number of parameters on the command line
@@ -30,21 +34,25 @@ RETURNS:           0
 ----------------------------------------------------------------------------- */
 int main(int argc, char *argv[])
 {
-    int i = 0;
+    clear_screen();
 
-    cout << endl;
-
-    if(argc == 1) cout << "Arguments ?\n\n"
-
-    cout << "argc = " << argc << endl;
-
-    while(argc--)
+    for(int i = 0; i < argc; ++i)
     {
-      cout << "argc = " << argc << "   ";
-      cout << "Argument # " << i++ << "  is:  ";
-      cout << *argv++ << endl;
+        cout << "Command line parameter " << i;
+        cout << " = " << argv[i] << endl;
     }
+
     cout << endl;
 
     return 0;         // 0 = Success
+}
+/* -----------------------------------------------------------------------------
+FUNCTION:          clear_screen()
+DESCRIPTION:       Function to clear the screen
+RETURNS:           void
+----------------------------------------------------------------------------- */
+void clear_screen()
+{
+    for(int i = 0; i < 50; ++i)
+      cout << endl;
 }

@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 # FILE NAME:         test1.sh
 # DESCRIPTION:
-# USAGE:             ./test1
+# USAGE:             ./test1.sh
 # COMPILER:          GNU g++ compiler on Linux
 #
 # MODIFICATION HISTORY:
